@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{AEDB6CCA-EA9A-4C82-AFC2-58FB557CBE4E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>minijoe</RootNamespace>
+    <AssemblyName>minijoe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="minijoe\common\Util.cs" />
+    <Compile Include="minijoe\compiler\ast\ArrayLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\AssignmentExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\AssignmentOperatorExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\BinaryExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\BinaryOperatorExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\BlockStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\BooleanLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\BreakStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\CallExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\CaseStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\ConditionalExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\ContinueStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\DeleteExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\DoStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\EmptyStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\Expression.cs" />
+    <Compile Include="minijoe\compiler\ast\ExpressionStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\ForInStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\ForStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\FunctionDeclaration.cs" />
+    <Compile Include="minijoe\compiler\ast\FunctionLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\Identifier.cs" />
+    <Compile Include="minijoe\compiler\ast\IfStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\IncrementExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\LabelledStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\LogicalAndExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\LogicalOrExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\NewExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\Node.cs" />
+    <Compile Include="minijoe\compiler\ast\NullLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\NumberLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\ObjectLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\ObjectLiteralProperty.cs" />
+    <Compile Include="minijoe\compiler\ast\ProgramNode.cs" />
+    <Compile Include="minijoe\compiler\ast\PropertyExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\ReturnStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\Statement.cs" />
+    <Compile Include="minijoe\compiler\ast\StringLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\SwitchStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\ThisLiteral.cs" />
+    <Compile Include="minijoe\compiler\ast\ThrowStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\TryStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\UnaryExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\UnaryOperatorExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\VariableDeclaration.cs" />
+    <Compile Include="minijoe\compiler\ast\VariableExpression.cs" />
+    <Compile Include="minijoe\compiler\ast\VariableStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\WhileStatement.cs" />
+    <Compile Include="minijoe\compiler\ast\WithStatement.cs" />
+    <Compile Include="minijoe\compiler\CompilerException.cs" />
+    <Compile Include="minijoe\compiler\Config.cs" />
+    <Compile Include="minijoe\compiler\Disassembler.cs" />
+    <Compile Include="minijoe\compiler\Eval.cs" />
+    <Compile Include="minijoe\compiler\Lexer.cs" />
+    <Compile Include="minijoe\compiler\Parser.cs" />
+    <Compile Include="minijoe\compiler\Token.cs" />
+    <Compile Include="minijoe\compiler\CompilerUtil.cs" />
+    <Compile Include="minijoe\compiler\visitor\CodeGenerationVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\AlgebraicIdentityVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\CommonVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\ConstantFoldingVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\DebugVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\FooVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\IdentityVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\PostfixVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\PrefixVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\PrintVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\combinator\SequenceVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\DeclarationVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\RoundtripVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\TraversalVisitor.cs" />
+    <Compile Include="minijoe\compiler\visitor\Visitor.cs" />
+    <Compile Include="minijoe\port\ByteArrayInputStream.cs" />
+    <Compile Include="minijoe\port\ByteArrayOutputStream.cs" />
+    <Compile Include="minijoe\port\Calendar.cs" />
+    <Compile Include="minijoe\port\DataInputStream.cs" />
+    <Compile Include="minijoe\port\DataOutputStream.cs" />
+    <Compile Include="minijoe\port\MyChar.cs" />
+    <Compile Include="minijoe\port\MyDouble.cs" />
+    <Compile Include="minijoe\port\MyInteger.cs" />
+    <Compile Include="minijoe\port\MyString.cs" />
+    <Compile Include="minijoe\port\MySystem.cs" />
+    <Compile Include="minijoe\port\OutputStream.cs" />
+    <Compile Include="minijoe\port\OutputStreamWriter.cs" />
+    <Compile Include="minijoe\port\Timezone.cs" />
+    <Compile Include="minijoe\port\Writer.cs" />
+    <Compile Include="minijoe\samples\shell\MjShell.cs" />
+    <Compile Include="minijoe\sys\JsArguments.cs" />
+    <Compile Include="minijoe\sys\JsArray.cs" />
+    <Compile Include="minijoe\sys\JsDate.cs" />
+    <Compile Include="minijoe\sys\JsError.cs" />
+    <Compile Include="minijoe\sys\JsException.cs" />
+    <Compile Include="minijoe\sys\JsFunction.cs" />
+    <Compile Include="minijoe\sys\JsObject.cs" />
+    <Compile Include="minijoe\sys\JsObjectFactory.cs" />
+    <Compile Include="minijoe\sys\JsSystem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="minijoe" />
+    <Folder Include="minijoe\common" />
+    <Folder Include="minijoe\compiler" />
+    <Folder Include="minijoe\compiler\ast" />
+    <Folder Include="minijoe\compiler\visitor" />
+    <Folder Include="minijoe\compiler\visitor\combinator" />
+    <Folder Include="minijoe\port" />
+    <Folder Include="minijoe\samples" />
+    <Folder Include="minijoe\samples\shell" />
+    <Folder Include="minijoe\sys" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.txt" />
+    <None Include="todo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,35 @@
+int?->Int32
+double?->Double
+
+in class Calendar
+	//FIXME: removed
+	public int Year;
+	
+TimeZone->Timezone
+	
+remove internal
+
+sbyte->byte
+
+
+e.printStackTrace();
+->
+Console.WriteLine(e.StackTrace);
+??? + e.Tostring() ???need + ???
+
+Convert.toString()
+
+
+Arith Overflow
+
+beyondcompare red line intent (tab->space)
+
+remove virtual
+
+StringBuilder->StringBuffer
+
+search and replace tab char
+
+switch default break add
+
+point the important file, for example, lexer.cs
